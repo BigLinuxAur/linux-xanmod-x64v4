@@ -50,6 +50,7 @@ jobs:
           cd $gitfolder
           sed -i "s/-bin//g" PKGBUILD
           sed -i "s/-linux//g" PKGBUILD
+          sed -i '/_package()/,// {/depends=/s/(/("${_pkgbase}-headers-${_arch}" /g}' PKGBUILD
           # sed -i "/\bdepends=/s/(/\('xpto\' 'xpto3\' 'xpto2\' /" PKGBUILD
           # sed -i "/makedepends=/s/(/\('xpto\' 'xpto2\' 'xpto3\' /" PKGBUILD
           # sed -i '/\bdepends=/!b; :a; n; a\    '\'xpto\' PKGBUILD

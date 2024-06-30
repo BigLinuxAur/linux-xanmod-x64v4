@@ -63,7 +63,7 @@ sha256sums=('897255cf7be85f3a699cfe7594d72ef93795003e21cef9c198c575c5037e70c1'
 
 _package() {
   pkgdesc="The Linux kernel and modules with Xanmod patches - Current Stable (MAIN) - Prebuilt version - ${_arch}"
-  depends=(coreutils kmod initramfs)
+  depends=("${_pkgbase}-headers-${_arch}" coreutils kmod initramfs)
   optdepends=('crda: to set the correct wireless channels of your country'
               'linux-firmware: firmware images needed for some devices')
   provides=(VIRTUALBOX-GUEST-MODULES
