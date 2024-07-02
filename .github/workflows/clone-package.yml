@@ -31,7 +31,7 @@ jobs:
         if: ${{ ! inputs.debug_enabled }}
         shell: bash
         run: |
-          repo=$(cut -d "/" -f2 <<< ${{ github.repository }})
+          repo=linux-xanmod-linux-bin-x64v4
           if [ -d "$repo" ];then
             rm -rf $repo
           fi
